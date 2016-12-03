@@ -32,7 +32,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.editarButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btCrear = new System.Windows.Forms.Button();
             this.Eliminar = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Filtrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -76,16 +76,6 @@
             this.editarButton.UseVisualStyleBackColor = true;
             this.editarButton.Click += new System.EventHandler(this.editarButton_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(483, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 101);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Guardar los cambios";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -93,6 +83,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(603, 150);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // btCrear
             // 
@@ -123,7 +114,6 @@
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.btCrear);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.editarButton);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.textBox1);
@@ -143,7 +133,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button editarButton;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btCrear;
         private System.Windows.Forms.Button Eliminar;

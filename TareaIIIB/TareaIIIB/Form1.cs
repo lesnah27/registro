@@ -90,6 +90,24 @@ namespace TareaIIIB
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("Select * from empleados where nombre='"+textBox1.Text+"'", cn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            cn.Close();
+        }
+        public  string nombre;
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Form2 fr = new Form2();
+            fr.Show(this);
+           
+
+        }
     }
     }
 
