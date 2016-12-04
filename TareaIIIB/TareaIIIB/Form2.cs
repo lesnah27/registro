@@ -51,10 +51,10 @@ namespace TareaIIIB
                 cmd.Connection = conn;
 
                 //esta es la original
-                cmd.CommandText = "INSERT INTO empleados VALUES (@id, @nombre, @apellidos,@sexo,@salario, @imagen,@fecha_de_nacimiento,@fecha_de_ingreso)";
+                cmd.CommandText = "INSERT INTO empleados VALUES (/*@id,*/ @nombre, @apellidos,@sexo,@salario, @imagen,@fecha_de_nacimiento,@fecha_de_ingreso)";
 
                 // Creando los parámetros necesarios
-                cmd.Parameters.Add("@id", System.Data.SqlDbType.Int);
+                //cmd.Parameters.Add("@id", System.Data.SqlDbType.Int);
                 cmd.Parameters.Add("@nombre", System.Data.SqlDbType.NVarChar);
                 cmd.Parameters.Add("@apellidos", System.Data.SqlDbType.NVarChar);
                 cmd.Parameters.Add("@sexo", System.Data.SqlDbType.NVarChar);
@@ -65,7 +65,7 @@ namespace TareaIIIB
 
 
                 // Asignando los valores a los atributos
-                cmd.Parameters["@id"].Value = int.Parse(idBox.Text);
+                //cmd.Parameters["@id"].Value = int.Parse(idBox.Text);
                 cmd.Parameters["@nombre"].Value = nombreBox.Text;
                 cmd.Parameters["@sexo"].Value = txtSexo.Text;
                 cmd.Parameters["@apellidos"].Value = apeBox.Text;

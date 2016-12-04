@@ -66,7 +66,7 @@ namespace TareaIIIB
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
                 cn.Close();
-                MessageBox.Show("Record Deleted Successfully!");
+                MessageBox.Show("Registro eliminado con exito!");
                 cargar();
             }
             else
